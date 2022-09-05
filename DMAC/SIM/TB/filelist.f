@@ -1,0 +1,2 @@
+$LAB_PATH/SIM/TB/timescale.v
+$LAB_PATH/SIM/TB/DMAC_CFG_TB.sv

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+source ../../scripts/common.sh
+
+export LAB_PATH="$PWD/../"
+FILELIST_TB="../TB/filelist.f"
+FILELIST_RTL="../../RTL/filelist.f"
+
+if [ -e $RUN_DIR/dump.vcd ];
+then
+	cd $RUN_DIR
+	$VERDI_CMD $VERDI_OPTIONS -f $FILELIST_TB -f $FILELIST_RTL -i dump.vcd
+else
+	echo "Dump file does not exist"
+	exit 1
+fi
