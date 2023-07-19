@@ -18,7 +18,7 @@ module DMAC_CFG
 // Configuration register to read/write
 reg [31:0]                        cfg_reg;
 
-always @(posedge clk) begin
+always_ff @(posedge clk) begin
 	if (!rst_n) begin
 		cfg_reg					<= 32'd0;
 	end
